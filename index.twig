@@ -1,0 +1,96 @@
+{{ set(this, 'title', _Blog.getBlogTitle()) }}
+{% set networkData = _Network.getNetworkData() %}
+{{this.registerJs("HomeController.listing();")}}
+{% set limit = 20 %}
+{% set articlesArr = _Blog.getBlogFeed({'limit': limit, 'offset': 0}) %}
+{% set articles = articlesArr.articles %}
+<div class="section section--local">
+  <div class="section__content">
+    <div class="row">
+      
+            {% if articles|length > 0 %}
+                {{this.render('partials/_single-article.twig', {article: articles[0], 'position': 1, containerClass: 'col-full', cardClass : 'card__news card--rural'}) | raw}}
+    </div>
+            <div class="row">
+            <div class="article col-full" style="margin-top: 20px; margin-bottom: 20px; ">
+                <img src="{{networkData.templatePath ~ "/static/images/"}}bnnerad.png" style="display:block; margin:0 auto">
+            </div>
+            {% endif %}
+    </div>
+    <div class="row">
+            {% for i in 1..4 %}
+                {% if articles[i] %}
+                    {{this.render('partials/_single-article.twig', {article: articles[i], 'position': (i+1), containerClass: 'col-quarter', cardClass : 'card__news card--local'}) | raw}}
+                {% endif %}
+            {% endfor %}
+        
+    </div>
+  </div>
+<!--</div>-->
+
+<!--<div class="section">-->
+<!--  <div class="section__header">
+    <div class="section__header-container">
+      <div class="section--left">
+        <div class="section__heading">Section Title</div>
+      </div>
+    </div>
+  </div> -->
+{% if articles[5] is defined %}
+    <div class="section__content">
+        <div class="row">
+            {% if articles[5] %}
+                {{this.render('partials/_single-article.twig', {article: articles[5], 'position': 6, containerClass: 'col-two-thirds', cardClass : 'card__news card--rural'}) | raw}}
+            {% endif %}
+
+                {% if articles[6] %}
+                    {{this.render('partials/_single-article.twig', {article: articles[6], 'position': 7, containerClass: 'col-third-short', cardClass : 'card__news card--local'}) | raw}}
+                {% endif %}
+
+
+                {% if articles[7] %}
+
+                    <div class="col-third-short" style="background-color:#fff; hrih ">
+                        <a class="card swap card__ without__image"><img src="{{networkData.templatePath ~ "/static/images/"}}mobbannerad.png" style="display:block; margin:3% auto 0 auto"></a>
+                    </div>
+
+                    {{this.render('partials/_single-article.twig', {article: articles[7], 'position': 9, containerClass: 'col-third-short', cardClass : 'card__news card--local'}) | raw}}
+                {% endif %}
+
+
+
+            {% for i in 8..10 %}
+                {% if articles[i] %}
+                    {{this.render('partials/_single-article.twig', {article: articles[i], 'position': (i+2), containerClass: 'col-third', cardClass : 'card__news card--local'}) | raw}}
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+{% endif %}
+<!--</div>-->
+
+<!--<div class="section">-->
+<!--  <div class="section__header">
+    <div class="section__header-container">
+      <div class="section__heading">Section Title</div>
+    </div>
+  </div> -->
+    {% if articles[11] is defined %}
+        <div class="section__content">
+            <div class="row">
+                {% for i in 11..18 %}
+                    {% if articles[i] %}
+                        {{this.render('partials/_single-article.twig', {article: articles[i], 'position': (i+2), containerClass: 'col-quarter', cardClass : 'card__news card--local'}) | raw}}
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    {% endif %}
+      
+    {% if articles|length >= limit %}
+        <div class="section__content">
+            <div class="row ajaxArticles" data-existing-nonpinned-count="{{articlesArr.existingNonPinnedCount}}"></div>
+            <a class="section__link loadMoreArticles" href="#">Load more <i class="fa fa-refresh"></i></a>
+        </div>
+    {% endif %}
+</div>
