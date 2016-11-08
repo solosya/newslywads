@@ -13,6 +13,11 @@
             {% set imgWidth = 500 %}
             {% set imgHeight = 350 %}
         {% endif %}
+        {% if 'feature-article' in containerClass %}
+            {% set imgWidth = 800 %}
+            {% set imgHeight = 600 %}
+        {% endif %}
+
         {% set articleImg = _Media.getMediaUrl(article.featuredMedia,imgWidth, imgHeight, {'crop': 'fill', 'gravity': 'faces'} ) %}
     {% endif %}
     {% set placeholder = 'https://placeholdit.imgix.net/~text?txtsize=33&txt=Loading&w='~imgWidth~'&h='~imgHeight~'' %}
@@ -42,9 +47,13 @@
         </div>
         <meta itemprop="datePublished" content="{{article.metaPublishDate}}"/>
         <meta itemprop="dateModified" content="{{article.metaUpdateDate}}"/>
+        
+
+
         <a itemprop="url" href="{{article.url}}" class="card swap card__news {{hasArticleMediaClass}} {{promotedClass}} {{blogClass}}" data-id="{{article.articleId}}" data-position="{{position}}" data-social="0" data-article-image="{{articleImg}}" data-article-text="{{Helper.htmlToText(article.title, -1) | raw | escape('html')}}">
             {% if article.hasMedia == 'TRUE' %}  
               <div class="card-image lazyload" data-original="{{articleImg}}" {% if articleImg is not empty %}style="background-image:url('{{placeholder}}');"{%endif%}></div>
+              <div class="card-image-tint"></div>
             {% endif %}
             <div class="content-section">
                 <div class="title-section">
@@ -60,6 +69,10 @@
                     <span class="category_share_icon shareIcons"><i class="fa fa-share-alt"></i></span>
                 </div>
             </div>
+            
+
+
+
             {% if article.userHasBlogAccess == '1' %}
             <div class="btn_overlay articleMenu">
                 <button title="Hide" data-guid="{{article.guid}}" class="btnhide social-tooltip HideBlogArticle" type="button" data-social="0">

@@ -155,40 +155,7 @@
             {{networkData.thirdPartyIntegrations['googleTagManager']['code'] | raw}}
         {% endif %}
 
-        <header class="header">
-            <div class="header__heading">
-                <a href="javscript:void(0)" id="header-responsive" class="header__heading-link header__heading-link--responsive"></a>
-
-                {% set profileImage = ''%}
-                {% if not _User.isGuest()%}
-                    {% set user = _User.getUser()%}
-                    {% if user.profileMedia | length > 0 and user.profileMedia.id != '' %}
-                        {% set profileImage = _Media.getMediaUrl(user.profileMedia, 150, 150, {radius: 'max', gravity: 'face', 'crop': 'thumb'})%}
-                    {% endif %}
-                {% endif %}
-
-                <div class="header__heading-container">
-                    <div class="header__heading--left">
-                        {% set logo = networkData.templatePath~'/static/images/theme_logo.svg'%}
-                        {% if networkData.logoMedia | length > 0 %}
-                            {% set logo = _Media.getMediaUrl(networkData.logoMedia, 225, 50, {'crop': 'fit'} )%}
-                        {% endif %}
-                        <a class="header__heading-logo" href="{{ networkData.defaultBlogUrl }}"><img src="{{logo}}" /></a>
-                        
-                    </div>
-                    <div class="header__heading--right">
-                       <a href="javascript:void(0)" class="header__heading-link" id="login">Sign In</a>
-                    </div>
-                    <a href="javscript:void(0)" class="header__heading-link header__heading-link--profile" id="profile"
-                    {% if profileImage != ''%} style="background-image:url({{profileImage}})" {% endif %}
-                    {% if _User.isGuest()%} style="background-image: none;" {% endif %}>
-                        {% if _User.isGuest()%}
-                            {{ not _Network.isNetworkClosed(network) ? 'Login' : 'Signup / Login' }}
-                        {% endif %}
-                    </a>
-                    {{ this.render('partials/_profile.twig', {network : networkData}) | raw }}
-                </div>
-            </div>
+        <header class="header" style="width:100%;">
             {{ this.render('partials/_header_navigation.twig', {blog : blogData, homeUrl :  networkData.defaultBlogUrl}) | raw }}
             {{ this.render('partials/_sidebar_navigation.twig', {blog : blogData, homeUrl :  networkData.defaultBlogUrl}) | raw }}
         </header>
