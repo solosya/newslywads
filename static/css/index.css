@@ -7367,12 +7367,12 @@ button.close {
   100% {
     background-position: -7px -400px; } }
 /* 
- * 	Core Owl Carousel CSS File
- *	v1.3.3
+ *  Core Owl Carousel CSS File
+ *  v1.3.3
  */
 /*
-* 	Owl Carousel Owl Demo Theme 
-*	v1.3.3
+*   Owl Carousel Owl Demo Theme 
+* v1.3.3
 */
 .owl-theme .owl-controls {
   margin-top: 10px;
@@ -15655,7 +15655,7 @@ button.like {
         line-height: 59px;
         margin: 0px 0px -1px;
         min-height: 1px;
-        /*	padding-left:($grid-gutter-width / 2);*/
+        /*  padding-left:($grid-gutter-width / 2);*/
         padding-right: 0px;
         padding-top: 40px;
         position: relative;
@@ -15763,7 +15763,7 @@ button.like {
       padding-left: 0px;
       padding-right: 0px;
       /** @include phone-to-tablet {
-      	display:none;
+        display:none;
       } */ }
       @media (min-width: 768px) {
         .news__social--horizontal {
@@ -15782,7 +15782,7 @@ button.like {
         line-height: 60px;
         margin: 0px 0px -1px;
         min-height: 1px;
-        /*	padding-left:($grid-gutter-width / 2);*/
+        /*  padding-left:($grid-gutter-width / 2);*/
         padding-right: 0px;
         padding-top: 40px;
         position: relative;
@@ -15893,7 +15893,7 @@ button.like {
   margin: 40px 0 50px;
   /* Forms */ }
   .login-page .login-form, .login-page .header__heading-container, .login-page .sub_header__container, .login-page .footer__container, .login-page .section__header-container, .login-page .section__sub-heading, .login-page .section__content, .login-page .profile__container, .login-page .news, .login-page .container {
-    		/* background-color:#fff;
+        /* background-color:#fff;
             border:1px solid rgba(0,0,0, 0.1); */ }
   .login-page .nav-tabs {
     border-bottom: 2px solid rgba(0, 0, 0, 0.2); }
@@ -16547,11 +16547,13 @@ html.ie .header__search-text {
     margin-bottom:15px !important;
 }
 
-.feature-article .caption_bottom div {
+.feature-article .caption_bottom div.author_name,
+.feature-article .caption_bottom div.post_date,
+ {
   color:white;
   display:inline-block;
 }
-.feature-article .title-section span {
+.feature-article .card .title-section span {
   font-size: 22px !important;
   color:white !important;
   font-weight:normal;
