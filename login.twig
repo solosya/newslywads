@@ -19,9 +19,9 @@
                                     {{this.render('layouts/partials/messages.twig') | raw }}
                                     <div class="social-buttons">
                                         <ul class="row">
-                                            <li class="facebook"><a href="{{_AppHelper.getSocialFacebookUrl(1)}}"><i class="fa fa-facebook"></i> Login with Facebook</a></li>
+                                            {# <li class="facebook"><a href="{{_AppHelper.getSocialFacebookUrl(1)}}"><i class="fa fa-facebook"></i> Login with Facebook</a></li> #}
                                             {% if not _Network.isNetworkClosed(network)%}
-                                            <li class="twitter"><a href="{{_AppHelper.getSocialTwitterUrl(1)}}"><i class="fa fa-twitter"></i> Login with Twitter</a></li>
+                                            {# <li class="twitter"><a href="{{_AppHelper.getSocialTwitterUrl(1)}}"><i class="fa fa-twitter"></i> Login with Twitter</a></li> #}
                                             {% endif %}
                                             {#
                                             <li class="g-plus"><a href="{{_AppHelper.getSocialGooglePlusUrl(1)}}"><i class="fa fa-google-plus"></i> Login with Google+</a></li>
