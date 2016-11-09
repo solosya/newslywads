@@ -16614,14 +16614,14 @@ html.ie .header__search-text {
 
 
 .trending-articles h1.trending-header{
-  font-family: Montserrat;
+  font-family: Montserrat !important;
   padding:10px 15px;
   margin:0;
   font-size:20px;
   line-height:20px;
   border: 1px #e0e0e0 solid;
   background:white;
-  color:black;
+  color:black !important;
 }
 
 
