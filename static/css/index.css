@@ -16544,11 +16544,12 @@ html.ie .header__search-text {
 }
 
 
-.feature-article .card div.caption_bottom.date div.author_name {
+.feature-article .card div.caption_bottom.date div.author_name,
+.feature-article .card div.caption_bottom.date div.post_date {
   color:white !important;
   display:inline-block !important;
 }
-.feature-article .title-section span {
+.feature-article a.card div.title-section span {
   font-size: 22px !important;
   color:white !important;
   font-weight:normal;

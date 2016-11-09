@@ -55,11 +55,14 @@
               <div class="card-image lazyload" data-original="{{articleImg}}" {% if articleImg is not empty %}style="background-image:url('{{placeholder}}');"{%endif%}></div>
               <div class="card-image-tint"></div>
             {% endif %}
+
             <div class="content-section">
-                <div class="title-section">
+               
+               <div class="title-section">
                     <span>{{article.label}}</span>
                     <div class="card-icon"></div>
                 </div>
+                
                 {% set articleTitle =  titleTruncateLength is defined ? article.title | truncate(titleTruncateLength) : article.title  %}
                 <h1 itemprop="headline" class="heading-section">{{ articleTitle | raw }}</h1>
                 <p itemprop="description" class="description">{{article.excerpt | raw}}</p>
