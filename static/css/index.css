@@ -16527,6 +16527,8 @@ html.ie .header__search-text {
 }
 
 .feature-article .card-image {
+    display:block !important;
+
   top:0;
   bottom:0;
   left:0;
@@ -16555,6 +16557,8 @@ html.ie .header__search-text {
 .feature-article .card div.caption_bottom.date {
   position:relative;
 }
+
+
 
 .feature-article .card div.caption_bottom.date div.author_name,
 .feature-article .card div.caption_bottom.date div.post_date,
