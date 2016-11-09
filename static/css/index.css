@@ -16514,7 +16514,12 @@ html.ie .header__search-text {
 }
 
 
-
+.col-quarter .card-image,
+.col-two-thirds .card-image,
+.col-third-short .card-image
+{
+    display:block !important;
+}
 .feature-article {
   background:black !important;
   position:relative !important;

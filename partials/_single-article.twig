@@ -13,6 +13,11 @@
             {% set imgWidth = 500 %}
             {% set imgHeight = 350 %}
         {% endif %}
+        {% if containerClass == 'col-two-thirds' %}
+            {% set imgWidth = 380 %}
+            {% set imgHeight = 440 %}
+        {% endif %}
+
         {% if 'feature-article' in containerClass %}
             {% set imgWidth = 800 %}
             {% set imgHeight = 600 %}
