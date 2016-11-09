@@ -16545,14 +16545,15 @@ html.ie .header__search-text {
 
 
 .feature-article .card div.caption_bottom.date div.author_name,
-.feature-article .card div.caption_bottom.date div.post_date {
+.feature-article .card div.caption_bottom.date div.post_date,
+.feature-article .card div.caption_bottom.date span i {
   color:white !important;
   display:inline-block !important;
 }
 .feature-article a.card div.title-section span {
   font-size: 22px !important;
   color:white !important;
-  font-weight:normal;
+  font-weight:200 !important;
 }
 
 .feature-article .title-section {
@@ -16600,22 +16601,27 @@ html.ie .header__search-text {
 
 
 .trending-articles h1.trending-header{
-  padding:10px;
+  font-family: Montserrat;
+  padding:10px 15px;
   margin:0;
   font-size:20px;
   line-height:20px;
   border: 1px #e0e0e0 solid;
   background:white;
+  color:black;
 }
 
 
 
 .trending-articles h1.heading-section{
+
   font-family: Tinos;
   font-size:20px !important;
   line-height:25px !important;
   height:75px !important;
-  width:200px !important;
+  width:220px !important;
+  color:black !important;
+  padding-right:25px !important;
   /*border: solid 0.5px #979797;*/
   /*border: 1px #e0e0e0 solid;*/
 }
@@ -16648,7 +16654,11 @@ html.ie .header__search-text {
   margin:0 0 5px 0 !important;
 }
 
-
+/*.trending-articles .content-section .title-section h1 {
+  color:black !important;
+  margin:0 35px 5px 0 !important;
+}
+*/
 
 .trending-articles .title-section span {
     font-size: 8.5px;
