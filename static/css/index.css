@@ -16494,7 +16494,7 @@ html.ie .header__search-text {
 
 
 
-
+/*#337ab7*/
 
 
 
@@ -16507,6 +16507,13 @@ html.ie .header__search-text {
 .center {
   text-align:center;
 }
+
+
+.header__navigation-list .header__navigation-item a {
+  color:#bfc3c3 !important;
+}
+
+
 
 .feature-article {
   background:black !important;
