@@ -16544,7 +16544,7 @@ html.ie .header__search-text {
 }
 
 
-.feature-article .caption_bottom.date div {
+.feature-article .caption_bottom.date div.author_name {
   color:white !important;
   display:inline-block !important;
 }
