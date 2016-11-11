@@ -16509,10 +16509,11 @@ html.ie .header__search-text {
 }
 
 
-/*.header__navigation-list .header__navigation-item a {
+.header__navigation-list .header__navigation-item a {
   color:red !important;
+  border-top: 3px solid none;
 }
-*/
+
 
 
 .col-quarter .card-image,
