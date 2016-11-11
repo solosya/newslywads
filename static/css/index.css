@@ -16510,8 +16510,10 @@ html.ie .header__search-text {
 
 
 .header__navigation-list .header__navigation-item a {
-  color:red !important;
   border-top: 3px solid rgba(0,0,0,0);
+}
+.header__navigation-list .header__navigation-item a:hover {
+  border-top: 3px #233543 solid;;
 }
 
 
