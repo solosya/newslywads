@@ -7,7 +7,7 @@ Menu
             <div class="col-md-12 col-xs-12">
                 <div class="header__navigation-row">
                     <ul class="header__navigation-list">
-                        {% set menuItems = blog.blogMenu %}
+                        {% set menuItems = blog.blogHeaderMenu %}
                             {% for parentItem in menuItems %}
                             {% set activeClass = (parentItem.link == _AppHelper.getServerUrl()) ? 'active' : ''%}
                             {% set externalClass = (parentItem.isExternal) ? 'external-link' : '' %}
