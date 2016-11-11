@@ -16511,7 +16511,7 @@ html.ie .header__search-text {
 
 .header__navigation-list .header__navigation-item a {
   color:red !important;
-  border-top: 3px solid none;
+  border-top: 3px solid rgba(0,0,0,0);
 }
 
 
