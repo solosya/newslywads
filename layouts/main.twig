@@ -172,7 +172,7 @@
                     <div class="header__heading--left">
                         {% set logo = networkData.templatePath~'/static/images/theme_logo.svg'%}
                         {% if networkData.logoMedia | length > 0 %}
-                            {% set logo = _Media.getMediaUrl(networkData.logoMedia, 225, 50, {'crop': 'fit'} )%}
+                            {% set logo = _Media.getMediaUrl(networkData.logoMedia, 290, 80, {'crop': 'fit'} )%}
                         {% endif %}
                         <a class="header__heading-logo" href="{{ networkData.defaultBlogUrl }}"><img src="{{logo}}" /></a>
                         
@@ -187,7 +187,7 @@
                             {{ not _Network.isNetworkClosed(network) ? 'Login' : 'Signup / Login' }}
                         {% endif %}
                     </a>
-                    {# {{ this.render('partials/_profile.twig', {network : networkData}) | raw }} #}
+                    {{ this.render('partials/_profile.twig', {network : networkData}) | raw }}
                 </div>
             </div>
             {{ this.render('partials/_header_navigation.twig', {blog : blogData, homeUrl :  networkData.defaultBlogUrl}) | raw }}
