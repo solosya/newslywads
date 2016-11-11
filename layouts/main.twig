@@ -187,7 +187,7 @@
                             {{ not _Network.isNetworkClosed(network) ? 'Login' : 'Signup / Login' }}
                         {% endif %}
                     </a>
-                    {{ this.render('partials/_profile.twig', {network : networkData}) | raw }}
+                    {# {{ this.render('partials/_profile.twig', {network : networkData}) | raw }} #}
                 </div>
             </div>
             {{ this.render('partials/_header_navigation.twig', {blog : blogData, homeUrl :  networkData.defaultBlogUrl}) | raw }}

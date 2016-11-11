@@ -16509,9 +16509,10 @@ html.ie .header__search-text {
 }
 
 
-.header__navigation-list .header__navigation-item a {
-  color:#bfc3c3 !important;
+/*.header__navigation-list .header__navigation-item a {
+  color:red !important;
 }
+*/
 
 
 .col-quarter .card-image,
