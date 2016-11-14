@@ -172,7 +172,7 @@
                     <div class="header__heading--left">
                         {% set logo = networkData.templatePath~'/static/images/themeLogo.svg'%}
                         {% if networkData.logoMedia | length > 0 %}
-                            {% set logo = _Media.getMediaUrl(networkData.logoMedia, 225, 50, {'crop': 'fit'} )%}
+                            {% set logo = _Media.getMediaUrl(networkData.logoMedia, 290, 80, {'crop': 'fit'} )%}
                         {% endif %}
                         <a class="header__heading-logo" href="{{ networkData.defaultBlogUrl }}"><img src="{{logo}}" /></a>
                         
