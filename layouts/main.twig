@@ -158,7 +158,7 @@
 
         <header class="header">
             <div class="header__heading">
-                <a href="javscript:void(0)" id="header-responsive" class="header__heading-link header__heading-link--responsive"></a>
+                <a href="javascript:void(0)" id="header-responsive" class="header__heading-link header__heading-link--responsive"></a>
 
                 {% set profileImage = ''%}
                 {% if not _User.isGuest()%}
@@ -170,9 +170,9 @@
 
                 <div class="header__heading-container">
                     <div class="header__heading--left">
-                        {% set logo = networkData.templatePath~'/static/images/theme_logo.svg'%}
+                        {% set logo = networkData.templatePath~'/static/images/themeLogo.svg'%}
                         {% if networkData.logoMedia | length > 0 %}
-                            {% set logo = _Media.getMediaUrl(networkData.logoMedia, 290, 80, {'crop': 'fit'} )%}
+                            {% set logo = _Media.getMediaUrl(networkData.logoMedia, 225, 50, {'crop': 'fit'} )%}
                         {% endif %}
                         <a class="header__heading-logo" href="{{ networkData.defaultBlogUrl }}"><img src="{{logo}}" /></a>
                         

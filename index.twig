@@ -9,10 +9,10 @@
     <div class="section__content">
         <div class="row">
             {% if articles|length > 0 %}
-                {{this.render('partials/_single-article.twig', {article: articles[0], 'position': 1, containerClass: 'feature-article col-xs-8', cardClass : 'card__news card--rural'}) | raw}}
+                {{this.render('partials/_single-article.twig', {article: articles[0], 'position': 1, containerClass: 'feature-article col-md-8', cardClass : 'card__news card--rural'}) | raw}}
             {% endif %}
 
-            <div class="col-xs-4 trending-articles">
+            <div class="col-md-4 trending-articles">
                 <h1 class="trending-header">TRENDING TODAY</h1>
                     {% for i in 1..3 %}
                         {% if articles[i] %}
