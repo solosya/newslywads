@@ -9,7 +9,7 @@
                     <ul class="nav nav-tabs nav_tabs_two">
                         <li class="loginTab {{ (login is defined and login == 'TRUE') ? 'active' : '' }}"><a href="#Login" data-toggle="tab">Login</a></li>
                         {% if not _Network.isNetworkClosed(network)%}
-                            <li class="signupTab {{ (signup is defined and signup == 'TRUE') ? 'active' : '' }}"><a href="#SignUp" data-toggle="tab">Sign Up</a></li>
+                            <li class="signupTab {{ (signup is defined and signup == 'TRUE') ? 'active' : '' }}"><a href="#SignUp" data-toggle="tab">Request an Account</a></li>
                         {% endif %}
                         </ul>
                     <div class="tab-content">
@@ -75,13 +75,13 @@
                             <div class="row">
                                 <div class="col-md-12 col-sm-12 col-xs-12" id="signup-social">
 
-                                    <p class="email-login"><span class="seperation">Let's get this party started!</span></p>
+                                    <p class="email-login"></p>
 
                                     <div class="social-buttons">
                                         <ul class="row">
-                                            <li class="facebook"><a href="{{_AppHelper.getSocialFacebookUrl()}}"><i class="fa fa-facebook"></i> Sign up with Facebook</a></li>
+                                            {#<li class="facebook"><a href="{{_AppHelper.getSocialFacebookUrl()}}"><i class="fa fa-facebook"></i> Sign up with Facebook</a></li>
                                             <li class="twitter"><a href="{{_AppHelper.getSocialTwitterUrl()}}"><i class="fa fa-twitter"></i> Sign up with Twitter</a></li>
-                                            {#
+                                            
                                             <li class="g-plus"><a href="{{_AppHelper.getSocialGooglePlusUrl()}}"><i class="fa fa-google-plus"></i> Sign up with Google+</a></li>
                                             <li class="linkedin"><a href="{{_AppHelper.getSocialLinkedinUrl()}}"><i class="fa fa-linkedin"></i> Sign up with LinkedIn</a></li>
                                             #}
@@ -89,7 +89,7 @@
                                     </div>
                                     <p class="text-center mbt50"><a href="#Login" data-toggle="tab" class="txt-link loginBtn">Already have an account? <span class="green">Login here</span></a></p>
 
-                                    <p class="email-login"><span class="seperation">Sign up with email</span></p>
+                                    <p class="email-login"><span class="seperation">Request an account</span></p>
                                     <div class="WriteAnArticleForm">
 
                                         <form name="signupForm" id="signupForm" class="form-horizontal" action="{{_AppHelper.getSignupUrl()}}" method="post" autocomplete="off">
