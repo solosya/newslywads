@@ -9,7 +9,7 @@
                     <ul class="nav nav-tabs nav_tabs_two">
                         <li class="loginTab {{ (login is defined and login == 'TRUE') ? 'active' : '' }}"><a href="#Login" data-toggle="tab">Login</a></li>
                         {% if not _Network.isNetworkClosed(network)%}
-                            <li class="signupTab {{ (signup is defined and signup == 'TRUE') ? 'active' : '' }}"><a href="#SignUp" data-toggle="tab">Request an Account</a></li>
+                            <li class="signupTab {{ (signup is defined and signup == 'TRUE') ? 'active' : '' }}"><a href="#SignUp" data-toggle="tab">Request an account</a></li>
                         {% endif %}
                         </ul>
                     <div class="tab-content">
@@ -79,9 +79,15 @@
 
                                     <div class="social-buttons">
                                         <ul class="row">
+<<<<<<< HEAD
                                             {#<li class="facebook"><a href="{{_AppHelper.getSocialFacebookUrl()}}"><i class="fa fa-facebook"></i> Sign up with Facebook</a></li>
                                             <li class="twitter"><a href="{{_AppHelper.getSocialTwitterUrl()}}"><i class="fa fa-twitter"></i> Sign up with Twitter</a></li>
                                             
+=======
+{#                                             <li class="facebook"><a href="{{_AppHelper.getSocialFacebookUrl()}}"><i class="fa fa-facebook"></i> Sign up with Facebook</a></li>
+                                            <li class="twitter"><a href="{{_AppHelper.getSocialTwitterUrl()}}"><i class="fa fa-twitter"></i> Sign up with Twitter</a></li>
+ #}                                            {#
+>>>>>>> 00cc39720a175bd9984adb13919785fdb2895d1d
                                             <li class="g-plus"><a href="{{_AppHelper.getSocialGooglePlusUrl()}}"><i class="fa fa-google-plus"></i> Sign up with Google+</a></li>
                                             <li class="linkedin"><a href="{{_AppHelper.getSocialLinkedinUrl()}}"><i class="fa fa-linkedin"></i> Sign up with LinkedIn</a></li>
                                             #}

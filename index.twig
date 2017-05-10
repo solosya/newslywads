@@ -1,8 +1,10 @@
 {{ set(this, 'title', _Blog.getBlogTitle()) }}
 {% set networkData = _Network.getNetworkData() %}
 {{this.registerJs("HomeController.listing();")}}
-{% set limit = 20 %}
+{% set limit = 22 %}
 {% set articlesArr = _Blog.getBlogFeed({'limit': limit, 'offset': 0}) %}
+
+
 {% set articles = articlesArr.articles %}
 <div class="section section--local">
   
@@ -91,7 +93,7 @@
     {% if articles[14] is defined %}
         <div class="section__content">
             <div class="row">
-                {% for i in 14..21 %}
+                {% for i in 14..22 %}
                     {% if articles[i] %}
                         {{this.render('partials/_single-article.twig', {article: articles[i], 'position': (i+2), containerClass: 'col-quarter', cardClass : 'card__news card--local'}) | raw}}
                     {% endif %}
