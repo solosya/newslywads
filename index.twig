@@ -93,7 +93,7 @@
     {% if articles[14] is defined %}
         <div class="section__content">
             <div class="row">
-                {% for i in 14..22 %}
+                {% for i in 14..17 %}
                     {% if articles[i] %}
                         {{this.render('partials/_single-article.twig', {article: articles[i], 'position': (i+2), containerClass: 'col-quarter', cardClass : 'card__news card--local'}) | raw}}
                     {% endif %}
@@ -105,7 +105,33 @@
     {% if articles|length >= limit %}
         <div class="section__content">
             <div class="row ajaxArticles" data-existing-nonpinned-count="{{articlesArr.existingNonPinnedCount}}"></div>
-            <a class="section__link loadMoreArticles" href="#">Load more <i class="fa fa-refresh"></i></a>
+            <a class="section__link loadMoreArticles" href="">Load more <i class="fa fa-refresh"></i></a>
         </div>
     {% endif %}
+
+        <div class="section__content">
+            <div class="row" ></div>
+            <a class="section__link" style="background-color: white;text-align: left;padding-left: 20px;"href="#">Social Content</a>
+        </div>
+
+    {% if articles[18] is defined %}
+        <div class="section__content">
+            <div class="row">
+                {% for i in 18..21 %}
+                    {% if articles[i] %}
+                        {{this.render('partials/_single-article.twig', {article: articles[i], 'position': (i+2), containerClass: 'col-quarter', cardClass : 'card__news card--local'}) | raw}}
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    {% endif %}
+
+    {% if articles|length >= limit %}
+        <div class="section__content">
+            <div class="row {# ajaxArticles #}" {# data-existing-nonpinned-count="{{articlesArr.existingNonPinnedCount}}" #}></div>
+            <a class="section__link {# loadMoreArticles #}" href="">Load more <i class="fa fa-refresh"></i></a>
+        </div>
+    {% endif %}
+
+
 </div>
