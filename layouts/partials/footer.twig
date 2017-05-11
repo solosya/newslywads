@@ -9,10 +9,10 @@
         <a href="{{network.defaultBlogUrl}}" class="footer__logo"><img src="{{logo}}" /></a>
         <div class="footer__copyright">Copyright {{'now'|date('Y')}}. All rights reserved.</div>
       </div>
-        {% set menuItems = blog.blogMenu %}
+        {% set menuItems = blog.blogFooterMenu %} 
         {% set halfCounter = (menuItems | length / 2) | round(0, 'ceil') - 1 %}
       <div class="footer__navigation">
-        <div class="footer__navigation--col-full">
+        <div class="footer__navigation--col-half">
           <ul class="footer__navigation--col-1">
               {% for i in 0..halfCounter %}
                   {% set menuItem = menuItems[i] %}
