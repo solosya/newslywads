@@ -183,8 +183,28 @@
                             {% set logo = _Media.getMediaUrl(networkData.logoMedia, 290, 80, {'crop': 'fit'} )%}
                         {% endif %}
                         <a class="header__heading-logo" href="{{ networkData.defaultBlogUrl }}"><img src="{{logo}}" /></a>
-                        
-                    </div>
+
+                        <a class="header__heading-link" href="https://www.facebook.com/getemonsidedotcom/"><img style="height:25px; padding-left:15px" src="{{networkData.templatePath}}/static/images/icons/social-facebook.svg" /></a>
+                        <a class="header__heading-link" href="https://www.youtube.com/channel/UCBclYxv4T-oZG-J4sPcq0ig"><img style="height:25px; padding-left:15px" src="{{networkData.templatePath}}/static/images/icons/social-youtube.svg" /></a>
+                        <a class="header__heading-link" href="https://twitter.com/getemonside"><img style="height:25px; padding-left:15px" src="{{networkData.templatePath}}/static/images/icons/social-twitter.svg" /></a>
+                        <a class="header__heading-link" href="https://www.instagram.com/getemonside"><img style="height:25px; padding-left:15px" src="{{networkData.templatePath}}/static/images/icons/social-instagram.svg" /></a>
+
+{#                         <div class="header__heading--left" sytle="background-image: url("../images/icons/category-facebook.svg") !important;" ></div>
+                        <div class="header__heading--left" sytle="background-image: url("../images/icons/category-youtube.svg") !important;" ></div>
+                        <div class="header__heading--left" sytle="background-image: url("../images/icons/category-twitter.svg") !important;" ></div>
+                        <div class="header__heading--left" sytle="background-image: url("../images/icons/category-instagram.svg") !important;" ></div>
+ #}{#   .col-full .card.withImage__content .withImage_card_content .card__youtube-icon, .login-form__col-full .card.withImage__content .withImage_card_content .card__youtube-icon, .col-full .card.without__image .withImage_card_content .card__youtube-icon, .login-form__col-full .card.without__image .withImage_card_content .card__youtube-icon {
+    background-image: url("../images/icons/category-youtube.svg"); }
+  .col-full .card.withImage__content .withImage_card_content .card__twitter-icon, .login-form__col-full .card.withImage__content .withImage_card_content .card__twitter-icon, .col-full .card.without__image .withImage_card_content .card__twitter-icon, .login-form__col-full .card.without__image .withImage_card_content .card__twitter-icon {
+    background-image: url("../images/icons/category-twitter.svg"); }
+  .col-full .card.withImage__content .withImage_card_content .card__vimeo-icon, .login-form__col-full .card.withImage__content .withImage_card_content .card__vimeo-icon, .col-full .card.without__image .withImage_card_content .card__vimeo-icon, .login-form__col-full .card.without__image .withImage_card_content .card__vimeo-icon {
+    background-image: url("../images/icons/category-vimeo.svg"); }
+  .col-full .card.withImage__content .withImage_card_content .card__instagram-icon, .login-form__col-full .card.withImage__content .withImage_card_content .card__instagram-icon, .col-full .card.without__image .withImage_card_content .card__instagram-icon, .login-form__col-full .card.without__image .withImage_card_content .card__instagram-icon {
+    background-image: url("../images/icons/category-instagram.svg"); }
+  .col-full .card.withImage__content .withImage_card_content .card__news-icon, .login-form__col-full .card.withImage__content .withImage_card_content .card__news-icon, .col-full .card.without__image .withImage_card_content .card__news-icon, .login-form__col-full .card.without__image .withImage_card_content .card__news-icon {
+    background-image: url(../images/icons/category-news.svg); }
+
+ #}                    </div>
                     <div class="header__heading--right">
                        <a href="javascript:void(0)" class="header__heading-link" id="login">Sign In</a>
                     </div>
