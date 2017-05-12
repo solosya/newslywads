@@ -10,7 +10,7 @@
     <head>
         <meta charset="UTF-8"/>
         <meta http-equiv="Accept-CH" content="DPR, Viewport-Width, Width">
-        <title>{{Html.encode(this.title)}}</title>
+        <title>{{this.title|raw}}</title>
         {{ Html.csrfMetaTags | raw }}
 
         {% set favicon = '' %}
